@@ -2,7 +2,11 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class CreateCourse {
-    public static void main(String[] args) {
+    public CreateCourse(String course_name, String course_ID, int course_pay) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         //reads user data (number of courses)

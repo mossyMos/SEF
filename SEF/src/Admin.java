@@ -29,15 +29,13 @@ public class Admin extends Staff {
 	public static String Menu() {
 		String zeroString = "------------------------------- \n";
 		String firstString = "*** Admin Menu *** \n";
-		String secondString = String.format("%-25s %s\n", "Create CourseList", "A");
-		String thirdString = String.format("%-25s %s\n", "Edit courseList", "B");
+		String secondString = String.format("%-25s %s\n", "Create Course", "A");
+		String thirdString = String.format("%-25s %s\n", "Allocate course", "B");
 		String fourthString = String.format("%-25s %s\n", "Create Timetable", "C");
-		String fifthString = String.format("%-25s %s\n", "View payroll", "D");
-		String sixthString = String.format("%-25s %s\n", "Create report", "E");
-		String seventhString = String.format("%-25s %s", "Exit Program", "X");
+		String fifthString = String.format("%-25s %s\n", "Report", "D");
+		String sixthString = String.format("%-25s %s", "Exit Program", "X");
 
-		return zeroString + firstString + secondString + thirdString + fourthString + fifthString + sixthString
-				+ seventhString;
+		return zeroString + firstString + secondString + thirdString + fourthString + fifthString + sixthString;
 	}
 
 	public static void menuChoice() {
@@ -49,7 +47,7 @@ public class Admin extends Staff {
 		System.out.println("-------------------------------");
 		switch (choice.toLowerCase()) {
 		case "a":
-			// createCourseList(); Add the actual methods in here to access them
+			HRApplication.addCourse();
 			break;
 		case "b":
 			// EditCourseList();

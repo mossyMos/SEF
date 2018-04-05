@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class HRApplication {
 	private static ArrayList<Staff> accounts = new ArrayList<Staff>();
+	private static ArrayList<CreateCourse> array = new ArrayList<CreateCourse>();
 
 	public static void main(String[] args) {
 		seedLogins();
@@ -10,7 +11,8 @@ public class HRApplication {
 
 	// Adds the login details of the users into the system
 	public static void seedLogins() {
-		// Since there's only one user for each of these staff members, the log in details are stored in an array
+		// Since there's only one user for each of these staff members, the log
+		// in details are stored in an array
 		Admin admin = new Admin("Admin", "cat");
 		Approver approver = new Approver("Approver", "dog");
 		Coordinator coordinator = new Coordinator("Coordinator", "mouse");
@@ -48,8 +50,33 @@ public class HRApplication {
 			}
 		}
 
-		
-			System.out.println("Username or password is incorrect, please try again");
-			loginSystem();
-		}
+		System.out.println("Username or password is incorrect, please try again");
+		loginSystem();
 	}
+
+	public static void addCourse() {
+		 
+        Scanner user_input = new Scanner(System.in);
+
+        // input course name
+        System.out.printf("%-35s %s", "Enter Course Name:", "");
+        String Course_name = user_input.nextLine();
+
+        // input vehicle Height checks if its numeric
+        System.out.printf("%-35s %s", "Please Course ID:", "");
+        String Course_ID = user_input.nextLine();
+
+        System.out.printf("%-35s %s", "Enter pay rates per hour:", "");
+        int Course_pay = user_input.nextInt();
+
+
+
+        CreateCourse newCourse = new CreateCourse(Course_name, Course_ID, Course_pay);
+        array.add(newCourse);
+
+        System.out.printf("New Course created successfully for %s !%n", Course_name);
+
+        Admin.menuChoice();
+        user_input.close();
+    }
+}
