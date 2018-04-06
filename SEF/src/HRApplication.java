@@ -55,28 +55,34 @@ public class HRApplication {
 	}
 
 	public static void addCourse() {
-		 
-        Scanner user_input = new Scanner(System.in);
 
-        // input course name
-        System.out.printf("%-35s %s", "Enter Course Name:", "");
-        String Course_name = user_input.nextLine();
+		Scanner user_input = new Scanner(System.in);
 
-        // input vehicle Height checks if its numeric
-        System.out.printf("%-35s %s", "Please Course ID:", "");
-        String Course_ID = user_input.nextLine();
+		// input course name
+		System.out.printf("%-35s %s", "Enter Course Name:", "");
+		String Course_name = user_input.nextLine();
 
-        System.out.printf("%-35s %s", "Enter pay rates per hour:", "");
-        int Course_pay = user_input.nextInt();
+		// input vehicle Height checks if its numeric
+		System.out.printf("%-35s %s", "Please Course ID:", "");
+		String Course_ID = user_input.nextLine();
 
+		System.out.printf("%-35s %s", "Enter pay rates per hour:", "");
+		int Course_pay = user_input.nextInt();
 
+		CreateCourse newCourse = new CreateCourse(Course_name, Course_ID, Course_pay);
+		array.add(newCourse);
 
-        CreateCourse newCourse = new CreateCourse(Course_name, Course_ID, Course_pay);
-        array.add(newCourse);
+		System.out.printf("New Course created successfully for %s !%n", Course_name);
 
-        System.out.printf("New Course created successfully for %s !%n", Course_name);
+		Admin.menuChoice();
+		user_input.close();
+	}
 
-        Admin.menuChoice();
-        user_input.close();
-    }
+	public static void Report() {
+		
+		for (int i = 0; i < array.size(); i++) {
+			System.out.println(array.get(i).getDetails());
+		}
+		Admin.menuChoice();
+	}
 }

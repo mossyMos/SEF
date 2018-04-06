@@ -40,7 +40,7 @@ public class Admin extends Staff {
 			// createTimetable();
 			break;
 		case "d":
-			// viewPayroll();
+			HRApplication.Report();
 			break;
 		case "e":
 			// createReport();
@@ -53,5 +53,7 @@ public class Admin extends Staff {
 			menuChoice();
 		}
 	}
+	
+	
 }
 
