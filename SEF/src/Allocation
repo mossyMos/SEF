@@ -1,0 +1,65 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.List;
+
+public class AllocateCourse extends HRApplication
+{
+	private static List<CourseList> CourseArray = new ArrayList<CourseList>();
+	private static List<CoordinatorList> CoordinatorArray = new ArrayList<CoordinatorList>();
+
+	public static void main(String args[]){
+		Allocate(String, String);
+	}
+
+public static void Allocate(String CourseID, String CoordinatorID)
+	{
+		boolean CourseExists = false;
+		int CoordinatorAvailable = Coordinator.getAvailability();
+		
+		Scanner scan = new Scanner(System.in);
+		
+		//Ask which course to add
+		System.out.println("Which course would you like to allocate to?");
+		CourseID = scan.nextLine();
+		
+		//Check if course exists inside <CourseArray>
+		for (int i = 0; i < CourseArray.size(); i++) {
+			if(CourseID.equals(CourseArray.get(i)))
+			{
+				CourseExists = true; 
+				System.out.println("Course is available!");
+			} else 
+				{
+					System.out.println("Course does not exist, please try again.");
+				}
+		}
+		
+		//if course is in array ask for the coordinator id from <CoordinatorArray>
+		if(CourseExists == true){
+			System.out.println("Please enter the CoodinatorID of desired teacher:");
+			CoordinatorID = scan.nextLine();
+			
+			
+			//check coordinator exists and is available
+			for(int j = 0; j < CoordinatorList.size(); j++){
+				if(CoordinatorID.equals(CoordinatorArray.get(j) && CoordinatorAvailable == 1))
+				{
+					System.out.println("Coordinator is available");
+				}  
+				else if(CoordinatorID.equals(CoordinatorArray.get(j) && CoordinatorAvailable == 0))
+				{
+					System.out.println("Coordinator is unavailable");
+				}
+				else
+				{
+					System.out.println("Coordinaotr does not exist");
+				}
+			}
+		}
+		
+			
+	}
+
+
+
+}
