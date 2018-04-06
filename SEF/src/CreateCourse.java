@@ -1,44 +1,26 @@
-import java.io.PrintWriter;
-import java.util.Scanner;
 
 public class CreateCourse {
-    public CreateCourse(String course_name, String course_ID, int course_pay) {
-		// TODO Auto-generated constructor stub
-	}
 
-	public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    private String Course_name;
+    private String Course_ID;
+    private int Course_pay;
 
-        //reads user data (number of courses)
-        System.out.print("Enter how many courses do you wish to add: ");
-        int numOfCourses = Integer.parseInt(scan.nextLine());
-
-        //puts the courses and rates into arrays
-        String arrayOfCourses[] = new String[numOfCourses];
-        int ratesOfCourses[] = new int[numOfCourses];
-        for (int i = 0; i < arrayOfCourses.length; i++) {
-            System.out.println("Enter the ID of course " + (i + 1) + " : ");
-            arrayOfCourses[i] = scan.nextLine();
-        }
-
-        for (int i = 0; i < arrayOfCourses.length; i++) {
-            System.out.println("Enter the rates of course " + (i + 1) + " : ");
-            ratesOfCourses[i] = scan.nextInt();
-        }
-
-        try {
-            PrintWriter pr = new PrintWriter("Courselist.txt");
-
-            //Prints list to file.txt
-            for (int i = 0; i < arrayOfCourses.length; i++) {
-                pr.print(arrayOfCourses[i]);
-                pr.print(", ");
-                pr.println(ratesOfCourses[i]);
-            }
-            pr.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("No such file exists.");
-        }
+    public CreateCourse(String Course_name, String Course_ID, int Course_pay) {
+        this.Course_name = Course_name;
+        this.Course_ID = Course_ID;
+        this.Course_pay = Course_pay;
     }
-}
+
+
+        public String getDetails() {
+
+            // this method prints out details.
+            String firstLine = String.format("%-20s %s\n", "Course name:", Course_name);
+            String secondLine = String.format("%-20s %s\n", "Course ID:", Course_ID);
+            String thirdLine = String.format("%-20s %s\n", "Pay per hour:", Course_pay);
+
+            return firstLine + secondLine + thirdLine;
+
+    }
+
+    }
