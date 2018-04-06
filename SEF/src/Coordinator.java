@@ -42,7 +42,7 @@ public class Coordinator extends Staff{
 			// createReport();
 			break;
 		case "x":
-			// exitProgram();
+			HRApplication.Logout();
 			break;
 		default:
 			System.out.println("Error! - Illegal character input, please try again.");

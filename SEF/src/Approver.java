@@ -46,7 +46,7 @@ public class Approver extends Staff {
 			// 
 			break;
 		case "x":
-			//
+			HRApplication.Logout();
 			break;
 		default:
 			System.out.println("Error! - Illegal character input, please try again.");

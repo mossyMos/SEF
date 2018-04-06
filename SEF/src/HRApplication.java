@@ -85,4 +85,22 @@ public class HRApplication {
 		}
 		Admin.menuChoice();
 	}
+	
+	public static void Logout(){
+		seedLogins(); 							//Restarts the program
+//		Scanner user_input = new Scanner(System.in);
+//		System.out.print("Are you sure you want to log out?");
+//		String a = user_input.nextLine();
+//		
+//		String secondString = String.format("%-25s %s\n", "To Logout, Press:", "A");
+//		String thirdString = String.format("%-25s %s\n", "TO cancel, Press:", "B");
+//		
+//		switch (a.toLowerCase()) {
+//		case "a":
+//			seedLogins();
+//			break;
+//		case "b":
+//			Admin.menuChoice();
+//			break;
+	}
 }
