@@ -6,16 +6,10 @@ public class Approver extends Staff {
 	
 	
 	public Approver(String username, String password){
-		this.username = username;
-		this.password = password;
+		super(username, password);
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
 	
 	public static String Menu() {
 		String zeroString = "------------------------------- \n";

@@ -1,10 +1,13 @@
 
 public abstract class Staff {
 
-	String username;
-	String password;
+	private String username;
+	private String password;
 
-	
+	public Staff(String username, String password){
+		this.username = username;
+		this.password = password;
+	}
 	
 	
 	public void setUsername(String username) {
