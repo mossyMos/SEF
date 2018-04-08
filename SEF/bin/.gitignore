@@ -1,7 +1,2 @@
-/CreateCourse.class
-/Staff.class
-/Admin.class
-/Approver.class
-/CasualStaff.class
-/Coordinator.class
-/HRApplication.class
+/AllocateCoordinator.class
+/Course.class

@@ -34,16 +34,13 @@ public class Admin extends Staff {
 			HRApplication.addCourse();
 			break;
 		case "b":
-			// EditCourseList();
+			HRApplication.addCoordinator();
 			break;
 		case "c":
-			// createTimetable();
+			System.out.println("UNDER CONSTRUCTION");
 			break;
 		case "d":
 			HRApplication.Report();
-			break;
-		case "e":
-			// createReport();
 			break;
 		case "x":
 			HRApplication.Logout();

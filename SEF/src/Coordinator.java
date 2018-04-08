@@ -2,8 +2,18 @@ import java.util.Scanner;
 
 public class Coordinator extends Staff{
 	
+	private String coordName;
+	
 	public Coordinator(String username, String password) {
 		super(username, password);
+	}
+	
+	public void setcoordName(String username) {
+		this.coordName = username;
+	}
+
+	public String getcoordName() {
+		return coordName;
 	}
 
 
