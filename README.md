@@ -11,3 +11,5 @@ Isaac Zhi Sern Ng - s3611452
 
 Nicholas Heuer - s3491714
 25%
+
+NOTE:For the implementation, the login details for the users are in the "UserAccounts" text file.
